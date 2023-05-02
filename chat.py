@@ -43,8 +43,8 @@ def resp(sentence):
             if tag == intent["tag"]:
                 reply =''
                 reply = random.choice(intent['responses'])
-                print(f"{reply}")
-                return reply
+                # print(f"{reply}")
+                return reply, tag
     else:
         print(f"I do not understand...")
         return reply
