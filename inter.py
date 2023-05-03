@@ -1,33 +1,36 @@
 import chat
 import mongoOp
 
-l = False
-id = -1
+id = "NULL"
 
-def response(input):
-    if(input=="login" or l == True):
-        pass
-        # if l==False:
-        #     l = True
-        #     return "Enter the login and password\nexamlpe:\ntest\ntest@123"
-        # else:
-        #     id = mongoOp.caller(input)
-        #     if(id!=-1):
-        #         return "insert the correct credentials"
+def response(input, l):
+    global id
+    if(l==True):
+        id = mongoOp.caller(input, "do")
+        if(id=="-1"):
+            return "Unable to login"
+        else:
+            return "Successfully logged in!" 
     else:
         res, tag = chat.resp(input)
-        if(tag=="balance_enquiry"):
-            return mongoOp.caller(input)
+        if(tag=="balance_enquiry" and id=="NULL"):
+            return "First you need to login to login type /login"
+        elif(tag=="balance_enquiry" and id!="NULL"):
+            return mongoOp.caller(tag, id)
         elif(tag=="latest_updates"):
-            return mongoOp.caller(input)
+            return mongoOp.caller(tag, "")
         elif(tag=="interest_rates"):
-            return mongoOp.caller(input)
+            return mongoOp.caller(tag, "")
         elif(tag=="bye"):
+            id="NULL"
             return(res)
         else:
             return(res)
 
-while(True):
-    ques = input("input->")
-    output = response(ques)
-    print(output)
+# while(True):
+#     ques = input("input->")
+#     output = response(ques, True)
+#     print(output)
+#     ques = input("input->")
+#     output = response(ques, False)
+#     print(output)
