@@ -44,6 +44,3 @@ def caller(tag, id):
     elif(tag=="interest_rates"):
         public = connect("publicAnnouncements")
         return interest(public)
-        
-        
-    
