@@ -1,16 +1,27 @@
 import chat
+import mongoOp
+
+l = False
+id = -1
 
 def response(input):
-    if(input=="login"):
-        return("connect to backend")
+    if(input=="login" or l == True):
+        pass
+        # if l==False:
+        #     l = True
+        #     return "Enter the login and password\nexamlpe:\ntest\ntest@123"
+        # else:
+        #     id = mongoOp.caller(input)
+        #     if(id!=-1):
+        #         return "insert the correct credentials"
     else:
         res, tag = chat.resp(input)
         if(tag=="balance_enquiry"):
-            return("connect to backend")
+            return mongoOp.caller(input)
         elif(tag=="latest_updates"):
-            return("connect to backend")
+            return mongoOp.caller(input)
         elif(tag=="interest_rates"):
-            return("connect to backend")
+            return mongoOp.caller(input)
         elif(tag=="bye"):
             return(res)
         else:
