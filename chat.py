@@ -46,5 +46,4 @@ def resp(sentence):
                 # print(f"{reply}")
                 return reply, tag
     else:
-        print(f"I do not understand...")
-        return reply
+        return "I do not understand...", None

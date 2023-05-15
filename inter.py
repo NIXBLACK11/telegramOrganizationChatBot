@@ -8,7 +8,7 @@ def response(input, l):
     if(l==True):
         id = mongoOp.caller(input, "do")
         if(id=="-1"):
-            return "Unable to login"
+            return "Unable to login press /login and put correct username and password ex:test test@123"
         else:
             return "Successfully logged in!" 
     else:
@@ -21,7 +21,7 @@ def response(input, l):
             return mongoOp.caller(tag, "")
         elif(tag=="interest_rates"):
             return mongoOp.caller(tag, "")
-        elif(tag=="bye"):
+        elif(tag=="quit"):
             id="NULL"
             return(res)
         else:
