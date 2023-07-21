@@ -1,0 +1,48 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day",
+          "What is your name?"
+        ],
+        "responses": [
+          "Hi there, how can Nimble help?\nYou can ask me about university information"
+        ]
+      },
+      {
+        "tag": "quit",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "marks_enquiry",
+        "patterns": ["can you tell me my marks", "what is my marks", "what is my marks", "what is my marks status"],
+        "responses":["marks_enquiry"]
+      },
+      {
+        "tag": "latest_updates",
+        "patterns": ["what are the latest updates about the university", "what are the updates in university", "what is the latest news regarding the university"],
+        "responses":["latest_updates"]
+      },
+      {
+        "tag": "fees_rates",
+        "patterns": ["what is the fees structure provided by your university", "tell me about the fees structure of your university", "fees structure?", "what are the changes in the fees structure"],
+        "responses":["fees_rates"]
+      }
+    ]
+  }
