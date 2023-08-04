@@ -1,7 +1,12 @@
 import pymongo
+from dotenv import load_dotenv
 
+# Load variables from .env into the environment
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 def connect(collectionName):
-    client = pymongo.MongoClient("mongodb+srv://NIXBLACK:nixblack11@cluster0.tk5azpj.mongodb.net/test")
+    client = pymongo.MongoClient(DATABASE_URL)
     Database = client["bank"]
     if collectionName=='users':
         users = Database['users']

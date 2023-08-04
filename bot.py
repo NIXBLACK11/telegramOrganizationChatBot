@@ -2,10 +2,15 @@
 import os
 import inter
 import telebot
+import pymongo
+from dotenv import load_dotenv
 
+# Load variables from .env into the environment
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 l = False
-BOT_TOKEN="6161492376:AAHtd7EhzL8uiS9iOjdFdQUXLzvJ4p0_icM"
 
 bot = telebot.TeleBot(BOT_TOKEN)
     
