@@ -31,12 +31,12 @@
       },
       {
         "tag": "marks_enquiry",
-        "patterns": ["can you tell me my marks", "what is my marks", "what is my marks", "what is my marks status"],
+        "patterns": ["can you tell me my marks", "what are my marks", "what are my marks", "what is my marks status"],
         "responses":["marks_enquiry"]
       },
       {
         "tag": "latest_updates",
-        "patterns": ["what are the latest updates about the university", "what are the updates in university", "what is the latest news regarding the university"],
+        "patterns": ["what are the latest updates about the university", "what are the updates in university", "what is the latest news regarding the university", "any updates?", "update"],
         "responses":["latest_updates"]
       },
       {
