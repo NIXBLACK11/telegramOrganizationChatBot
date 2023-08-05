@@ -10,31 +10,30 @@ Overall, the combination of NLP, MongoDB, and Docker makes for a powerful and fl
 
 ## Problems solved by ChatBots
 Furthermore, chatbots solve various problems across domains, including :
-1. Enhanced Customer Support: Chatbots improve customer support by providing quick and
+- Enhanced Customer Support: Chatbots improve customer support by providing quick and
 accurate responses, handling FAQs, and troubleshooting common issues, resulting in
 improved response times and customer satisfaction.
-2. 24/7 Availability: Unlike human agents, chatbots can operate round the clock, providing
+- 24/7 Availability: Unlike human agents, chatbots can operate round the clock, providing
 continuous support and assistance to users, regardless of time zones.
-3. Time and Cost Efficiency: Chatbots automate routine tasks, handle multiple queries
+- Time and Cost Efficiency: Chatbots automate routine tasks, handle multiple queries
 simultaneously, and reduce the need for additional human resources, resulting in time and
 cost savings for businesses.
-4. Personalized Recommendations: Chatbots analyze user preferences and behavior to offer
+- Personalized Recommendations: Chatbots analyze user preferences and behavior to offer
 personalized recommendations, improving user engagement and conversion rates.
-5. Simplified Transactions: Chatbots facilitate seamless and user-friendly transactions by
+- Simplified Transactions: Chatbots facilitate seamless and user-friendly transactions by
 processing payments, providing order details, and assisting with transaction-related
 inquiries.
-5
-6. Language Learning and Assistance: Chatbots serve as language tutors, offering language
+- Language Learning and Assistance: Chatbots serve as language tutors, offering language
 learning resources, vocabulary exercises, and interactive conversational practice.
-7. Streamlined Information Retrieval: Chatbots excel at retrieving specific information
+- Streamlined Information Retrieval: Chatbots excel at retrieving specific information
 quickly and accurately, providing real-time data, weather updates, news summaries, and
 access to FAQs.
-8. Increased User Engagement: Chatbots engage users in conversational experiences,
+- Increased User Engagement: Chatbots engage users in conversational experiences,
 fostering personalized assistance and connection, leading to improved user engagement
 and brand loyalty.
-9. Data Collection and Analysis: Chatbots gather valuable user data, enabling market
+- Data Collection and Analysis: Chatbots gather valuable user data, enabling market
 research, customer analysis, and product/service improvements.
-10. Workflow Automation: Chatbots automate internal workflows, handling administrative
+- Workflow Automation: Chatbots automate internal workflows, handling administrative
 tasks, scheduling meetings, retrieving information, and providing internal support,
 optimizing operational processes.
 By addressing these challenges, chatbots significantly contribute to improved customer
