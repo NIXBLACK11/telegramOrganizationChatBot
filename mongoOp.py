@@ -1,4 +1,5 @@
 import pymongo
+import os
 from dotenv import load_dotenv
 
 # Load variables from .env into the environment
