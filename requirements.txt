@@ -3,3 +3,6 @@ nltk
 pymongo
 matplotlib
 python-dotenv
+torch 
+torchvision 
+torchaudio
