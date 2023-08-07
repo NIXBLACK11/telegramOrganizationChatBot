@@ -1,5 +1,7 @@
 # Telegram NLP Chat Bot
 
+![CHATBANKER](./Readme/chatBot.jpg)
+
 The Telegram NLP chat bot is designed to understand and respond to natural language input from users on the Telegram platform. It uses NLP to analyze the user's message and determine what action should be taken in response. For example, if the user asks for the weather in a certain location, the bot will use an NLP model to extract the location and then retrieve weather information using an API.
 
 To store data related to user conversations and other information, the bot uses MongoDB, a popular NoSQL database. MongoDB is a document-oriented database that stores data in a flexible, JSON-like format, which makes it well-suited for handling unstructured data like text messages.
@@ -40,6 +42,25 @@ By addressing these challenges, chatbots significantly contribute to improved cu
 experiences, increased efficiency, and enhanced productivity across industries and sectors.
 
 ## Methodology
+
+### Working of the CHATBANKER
+#### Natural Language Processing (NLP) Pipeline
+![CHATBANKER](./Readme/full.jpg)
+The heart of this project lies in its NLP pipeline, which orchestrates a sequence of carefully designed steps to transform user input into meaningful responses. The pipeline leverages various NLP techniques and tools to ensure efficient comprehension and interaction.
+
+#### Tokenization
+![CHATBANKER](./Readme/tokenization.jpg)
+Tokenization: User input sentences are initially tokenized, meaning they are divided into individual words or tokens. This process is facilitated by the NLTK library's nltk.word_tokenize() function. Tokenization dissects sentences into meaningful units, forming the basis for further analysis.
+
+#### Stemming
+![CHATBANKER](./Readme/stemming.jpg)
+The pipeline employs stemming, using the Porter Stemmer algorithm (nltk.stem.porter.PorterStemmer), which identifies the root form of words. This process helps reduce variations of words to their base form, aiding in text normalization and pattern recognition.
+
+#### Bag of Words Representation
+![CHATBANKER](./Readme/bagofwords.jpg)
+The tokenized words from user input are then transformed into a numerical representation known as a "bag of words."
+
+Bag of Words: Each sentence is converted into a fixed-length numerical vector. This vector encodes the presence or absence of words, disregarding their order. The nltk_utils.bag_of_words() function computes this vector by marking the presence of words from the tokenized sentence in a predefined vocabulary.
 ### Technologies used by CHATBANKER
 When developing ChatBanker, I leveraged a variety of technologies to ensure its functionality
 and effectiveness. Some of the key technologies utilized include:
@@ -84,6 +105,8 @@ To deploy a chatbot on AWS EC2, follow these steps:
 - Test the chatbot's functionality and set up monitoring.
 - Scale the EC2 instances as needed and automate deployment for updates.
 
+## Working of the ChatBot
+
 ## Requirements
 - Python 3.6 or higher
 - Telegram API token
@@ -114,8 +137,8 @@ To start the chat bot, run the following command:
 ## Docker
 To build the Docker image, run the following command:
 
-    docker build -t telegram-nlp-bot .
+    docker image pull nixblack/chatbot:banker
 
 To start the Docker container, run the following command:
 
-    docker run -d --env-file .env telegram-nlp-bot
+    docker run -d --env-file .env nixblack/chatbot:banker
