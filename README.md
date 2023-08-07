@@ -140,6 +140,12 @@ To deploy a chatbot on AWS EC2, follow these steps:
 ## Installation
 - Clone this repository and navigate to the project directory.
 
+        git clone https://github.com/NIXBLACK11/telegramOrganizationChatBot.git
+
+- Install pyTorch using this command
+
+        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu 
+
 - Install the required Python packages by running the following command:
 
         pip install -r requirements.txt
