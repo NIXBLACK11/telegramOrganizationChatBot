@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.10-alpine
 
 WORKDIR /app
 
@@ -8,6 +8,9 @@ RUN apk update \
     && apk add --no-cache gcc musl-dev linux-headers
 
 RUN pip install --no-cache-dir -r requirements.txt
+
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
 
 COPY . .
 

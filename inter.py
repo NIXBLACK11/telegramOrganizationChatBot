@@ -13,7 +13,7 @@ def response(input, l):
             return "Successfully logged in!" 
     else:
         res, tag = chat.resp(input)
-        if(tag=="balance_enquiry" and id=="NULL"):
+        if((tag=="balance_enquiry" or tag=="balance_graph") and id=="NULL"):
             return "First you need to login to login type /login"
         elif(tag=="balance_enquiry" and id!="NULL"):
             return mongoOp.caller(tag, id)
@@ -21,6 +21,8 @@ def response(input, l):
             return mongoOp.caller(tag, "")
         elif(tag=="interest_rates"):
             return mongoOp.caller(tag, "")
+        elif(tag=="balance_graph" and id!="NULL"):
+            return mongoOp.caller(tag, id)
         elif(tag=="quit"):
             id="NULL"
             return(res)

@@ -44,6 +44,12 @@ def resp(sentence):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
+                if(tag=="balance_graph" or tag=="balance_enquiry"):
+                    if "graph" in sentence:
+                        tag = "balance_graph"
+                    else:
+                        print("balance enquiry")
+                        tag = "balance_enquiry"
                 reply =''
                 reply = random.choice(intent['responses'])
                 # print(f"{reply}")

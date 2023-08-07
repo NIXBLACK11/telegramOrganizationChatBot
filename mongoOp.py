@@ -29,6 +29,10 @@ def balance(users, id):
     one = users.find_one({"_id":id})
     return one["accountBalance"]
 
+def balanceGraph(users, id):
+    one = users.find_one({"_id":id})
+    return one["balanceValues"]
+
 def updates(public):
     one = public.find_one({"callerId":321}, {'latestUpdates':1})
     return one["latestUpdates"]
@@ -50,3 +54,7 @@ def caller(tag, id):
     elif(tag=="interest_rates"):
         public = connect("publicAnnouncements")
         return interest(public)
+    elif(tag=="balance_graph"):
+        users = connect("users")
+        values = balanceGraph(users, id)
+        return "graph "+values

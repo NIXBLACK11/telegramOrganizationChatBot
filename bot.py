@@ -1,6 +1,7 @@
 #pip install pyTelegramBotAPI
 import os
 import inter
+from photoWork import create_plot
 import telebot
 from dotenv import load_dotenv
 
@@ -32,6 +33,16 @@ def echo_all(message):
     # bot.reply_to(message, message.text)
     response = inter.response(message.text, l)
     l = False
-    bot.reply_to(message, response)
+    
+    if type(response)==str and response.split(" ")[0] == "graph":
+        val = response.split(" ")
+        val = val[1:]
+        values = [int(i) for i in val]
+        create_plot(values)
+        chat_id = message.from_user.id
+        bot.send_photo(chat_id, photo=open('monthly_expenditures.png', 'rb'))
+        os.remove('monthly_expenditures.png')
+    else:
+        bot.reply_to(message, response)
 
 bot.infinity_polling()
