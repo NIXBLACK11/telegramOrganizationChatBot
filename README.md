@@ -150,6 +150,10 @@ To deploy a chatbot on AWS EC2, follow these steps:
 
         pip install -r requirements.txt
 
+- To install nltk tokenizer
+
+        python3 -c "import nltk;nltk.download('punkt')"
+
 - Create a new Telegram bot by following the instructions in the Telegram Bot documentation.
 
 - Create a MongoDB instance and obtain the connection URL.

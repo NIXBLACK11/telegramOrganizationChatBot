@@ -1,3 +1,5 @@
 pyTelegramBotAPI
 nltk
 pymongo
+matplotlib
+python-dotenv
