@@ -1,5 +1,7 @@
 # Telegram NLP Chat Bot
 
+To use the bot check [chatbanker on telegram](https://t.me/bank_detail_bot)
+
 ![CHATBANKER](./Readme/chatBot.jpg)
 
 The Telegram NLP chat bot is designed to understand and respond to natural language input from users on the Telegram platform. It uses NLP to analyze the user's message and determine what action should be taken in response. For example, if the user asks for the weather in a certain location, the bot will use an NLP model to extract the location and then retrieve weather information using an API.
@@ -65,6 +67,7 @@ Each sentence is converted into a fixed-length numerical vector. This vector enc
 
 ### Neural Network Architecture
 ![CHATBANKER](./Readme/ffnn.png)
+
 The foundation of this project is a specialized Feedforward Neural Network (FNN) architecture, meticulously crafted to excel in multi-class classification tasks. Built using the PyTorch framework, the network employs layers designed for powerful feature extraction and intent classification.
 
 ####  Layers and Components
@@ -130,6 +133,10 @@ To deploy a chatbot on AWS EC2, follow these steps:
 - Scale the EC2 instances as needed and automate deployment for updates.
 
 ## Working of the ChatBot
+![CHATBANKER](./Readme/telegram.png)
+![CHATBANKER](./Readme/graphBalance.jpg)
+
+
 
 ## Requirements
 - Python 3.6 or higher
