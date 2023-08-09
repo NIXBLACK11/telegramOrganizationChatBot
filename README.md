@@ -133,8 +133,24 @@ To deploy a chatbot on AWS EC2, follow these steps:
 - Scale the EC2 instances as needed and automate deployment for updates.
 
 ## Working of the ChatBot
-![CHATBANKER](./Readme/telegram.png)
+
+Experience the chatbot in action on Telegram! Simply search for the bot using the handle [@bank_detail_bot] or directly using the [link](https://t.me/bank_detail_bot) and witness its capabilities using the provided test login credentials:
+
+Username: test<br>
+Password: test@123
+
+Explore the bot's functionality, including inquiries about user information such as account balances and year-long balance graphs. 
+
 ![CHATBANKER](./Readme/graphBalance.jpg)
+
+See how the bot responds to various queries and commands, enhancing your understanding of its capabilities.
+
+For visual reference, here's a sneak peek at what interacting with the bot on Telegram might look like:
+
+![CHATBANKER](./Readme/telegram.png)
+
+Engage with the chatbot to discover its potential and witness firsthand how it addresses different user needs and inquiries."
+
 
 
 
