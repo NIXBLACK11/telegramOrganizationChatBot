@@ -116,21 +116,16 @@ inputs, and perform other actions within Telegram.
 BotFather, which is the official bot for creating and managing bots on Telegram. The
 BotFather provides you with an API token that you can use to authenticate Chatbanker
 and make API calls.
-### Amazon(EC2)
-Amazon EC2 (Elastic Compute Cloud) is a scalable virtual machine service provided by AWS. It
-allows you to create and manage virtual servers, known as EC2 instances, in the cloud. These
-instances serve as the infrastructure to host and run Chatbanker's backend server.
-With EC2, you can choose the specifications for your virtual instances, including the CPU,
-memory, storage, and operating system. This flexibility enables you to tailor the resources
-according to the requirements of the Chatbanker application.
-To deploy a chatbot on AWS EC2, follow these steps:
-- Create an EC2 instance with the desired specifications.
-- Set up the backend server by installing dependencies and deploying the code.
-13
-- Configure networking and security settings.
-- Connect the chatbot to external services with the necessary credentials.
-- Test the chatbot's functionality and set up monitoring.
-- Scale the EC2 instances as needed and automate deployment for updates.
+### Cloud
+A cloud-based virtual machine service provides a scalable solution for hosting Chatbanker's backend server. This service allows you to effortlessly create and manage virtual servers, commonly referred to as instances, within the cloud environment. These instances serve as the foundation for running the Chatbanker backend.
+Through this virtual machine service, you gain the flexibility to tailor the specifications of your instances according to your application's needs. This includes selecting parameters like CPU, memory, storage, and the operating system.
+To deploy the chatbot on the chosen cloud platform, adhere to these outlined steps:
+- Instance Creation: Generate an instance with the desired characteristics to match the application requirements.
+- Backend Setup: Establish the backend server by deploying the necessary code and installing dependencies.
+- Network Configuration: Arrange networking settings and ensure security measures are in place.
+- Integration with External Services: Establish connections with external services using the appropriate credentials.
+- Functionality Testing: Thoroughly test the chatbot's functionality and implement monitoring mechanisms.
+- Scalability: Scale the instances based on demand, and facilitate automated deployment for future updates.
 
 ## Working of the ChatBot
 
