@@ -1,4 +1,4 @@
-# Telegram Bases Chatbot for bank users
+# Telegram Based Chatbot for bank users
 
 To use the bot check [chatbanker on telegram](https://t.me/bank_detail_bot)
 
