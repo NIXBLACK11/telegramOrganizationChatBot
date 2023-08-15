@@ -1,4 +1,4 @@
-# Telegram NLP Chat Bot
+# Telegram Bases Chatbot for bank users
 
 To use the bot check [chatbanker on telegram](https://t.me/bank_detail_bot)
 
