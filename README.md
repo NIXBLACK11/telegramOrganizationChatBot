@@ -1,4 +1,4 @@
-# Telegram NLP Chat Bot
+# Telegram Bases Chatbot for bank users
 
 To use the bot check [chatbanker on telegram](https://t.me/bank_detail_bot)
 
@@ -128,6 +128,8 @@ To deploy the chatbot on the chosen cloud platform, adhere to these outlined ste
 - Scalability: Scale the instances based on demand, and facilitate automated deployment for future updates.
 
 ## Working of the ChatBot
+
+![CHATBANKER](./Readme/Untitled%20Diagram.drawio(1).png)
 
 Experience the chatbot in action on Telegram! Simply search for the bot using the handle [@bank_detail_bot] or directly using the [link](https://t.me/bank_detail_bot) and witness its capabilities using the provided test login credentials:
 

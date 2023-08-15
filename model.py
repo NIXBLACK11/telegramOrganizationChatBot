@@ -8,7 +8,7 @@ class NeuralNet(nn.Module):
         self.l1 = nn.Linear(input_size, hidden_size) 
         self.l2 = nn.Linear(hidden_size, hidden_size) 
         self.l3 = nn.Linear(hidden_size, num_classes)
-        self.relu = nn.ReLU()
+        self.relu = nn.ReLU() # Rectified Linear Unit 
         #It replaces all the negative elements in the input tensor with 0 (zero), and all the non-negative elements are left unchanged
     def forward(self, x):
         out = self.l1(x)
@@ -16,5 +16,5 @@ class NeuralNet(nn.Module):
         out = self.l2(out)
         out = self.relu(out)
         out = self.l3(out)
-        # no activation and no softmax at the end
+        # no activation and no softmax at the end(crossenttropy)
         return out
