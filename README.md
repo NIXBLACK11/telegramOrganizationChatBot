@@ -126,6 +126,25 @@ To deploy the chatbot on the chosen cloud platform, adhere to these outlined ste
 - Integration with External Services: Establish connections with external services using the appropriate credentials.
 - Functionality Testing: Thoroughly test the chatbot's functionality and implement monitoring mechanisms.
 - Scalability: Scale the instances based on demand, and facilitate automated deployment for future updates.
+### NumPy
+NumPy is a fundamental package for scientific computing in Python. It provides support for arrays, matrices, and a wide range of mathematical functions to efficiently manipulate and analyze large datasets. NumPy's powerful tools make numerical computations and data manipulation easier, making it a cornerstone of many data science and machine learning projects.
+Key Features:
+- Multidimensional arrays for efficient data storage and manipulation.
+- Broadcasting enables element-wise operations on arrays of different shapes.
+- Mathematical functions for linear algebra, Fourier analysis, statistics, etc.
+### PyTorch
+PyTorch is an open-source machine learning framework that provides dynamic computational graphs, making it popular among researchers and developers. It allows you to create and train deep learning models with ease. PyTorch's flexibility and GPU acceleration enable rapid experimentation and efficient model training.
+Key Features:
+- Dynamic computational graphs enable on-the-fly changes to models.
+- Autograd for automatic differentiation and gradient computation.
+- GPU support for accelerated training of neural networks.
+### NLTK (Natural Language Toolkit)
+NLTK is a comprehensive library for natural language processing (NLP) and text analysis tasks in Python. It offers tools for tokenization, stemming, part-of-speech tagging, syntactic parsing, and more. NLTK is widely used for processing and understanding human language data, making it a valuable asset in various language-related projects.
+Key Features:
+- Tokenization: Splitting text into words or sentences.
+- Stemming: Reducing words to their base or root form.
+- Part-of-speech tagging: Identifying grammatical components of words.
+- Syntactic parsing: Analyzing sentence structure for deeper understanding.
 
 ## Working of the ChatBot
 
