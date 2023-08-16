@@ -4,9 +4,7 @@ import telebot
 
 
 def create_plot(expenditures):
-    # Monthly expenditures data (replace with your actual data)
     months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    expenditures = [1000, 1200, 800, 950, 1100, 750, 850, 900, 1000, 1150, 950, 1050]
 
     plt.figure(figsize=(10, 6))  # Set the figure size
     plt.plot(months, expenditures, marker='o')  # Create the line plot with markers on data points
