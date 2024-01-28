@@ -7,6 +7,9 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+#add more for documents
+#calender academic calender
+
 def connect(collectionName):
     client = pymongo.MongoClient(DATABASE_URL)
     Database = client["BankBot"]
