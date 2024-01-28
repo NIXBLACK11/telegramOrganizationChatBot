@@ -4,16 +4,25 @@ import chatBot
 def response(input, id):
     tag: str = chatBot.chat(input)
     resp: str = ""
-    if(tag.split(" ")[1]!="backend"):
-        resp = tag.random()
-    else:
-        if(tag bina login):
-            resp = mongoOp.func()
+
+    if(tag=="balance_graph"):
+        if(userExists(id)):
+            resp = mongoOp.balance_graph(id)
         else:
-            if(mongoOp.userExists(id)):
-                if(tag==""):
-            else:
-                resp = "For this you need to login first"
+            resp = "You need to login first"
+    else if(tag=="balance_enquiry"):
+        if(userExists(id)):
+            resp = mongoOp.balance_graph(id)
+        else:
+            resp = "You need to login first"
+    else if(tag=="latest_updates"):
+        resp = mongoOp.latest_updates()
+    else if(tag=="interest_rates"):
+        resp = mongoOp.interest_rates()
+    else if(tag=="TimeQuery"):
+        resp = 
+    else:
+        resp = 
 
 
     return resp

@@ -5,9 +5,12 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import mongoOp
 import inter
 
+load_dotenv()
+
 loginRequest = False
-TOKEN: Final= '6663036335:AAFYeRj99HAC6B8rD1cab04F_WpUr6pwxXE'
-BOT_USERNAME = '@Test123manubot'
+
+TOKEN: Final = os.getenv("TELEGRAM_API")
+BOT_USERNAME: Final = os.getenv("BOT_USERNAME")
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     response: str = "Hello! Thanks for chatting with me! I am NIMBLE and I am here to help you regarding your bank information!"

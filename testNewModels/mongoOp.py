@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load variables from .env into the environment
 load_dotenv()
 
-DATABASE_URL = os.getenv("mongodb+srv://NIXBLACK:nixblack11@cluster0.tk5azpj.mongodb.net/")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 def connect(collectionName):
     client = pymongo.MongoClient(DATABASE_URL)
