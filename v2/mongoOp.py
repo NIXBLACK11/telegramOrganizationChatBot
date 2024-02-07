@@ -39,9 +39,9 @@ def login(id, credentials):
     exists = users.find_one({"username": username, "password": password})
     if exists:
         if exists["id"] == -1:
-            users.update_one({"username": username, "password": password}, {"id": id})
+            users.update_one({"username": username, "password": password}, {"$set": {"id": id}})
             resp = True
-        else if exists["id"] == id:
+        elif exists["id"] == id:
             resp = True
         else:
             resp = False

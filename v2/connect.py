@@ -1,3 +1,4 @@
+import os
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
@@ -5,7 +6,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 import mongoOp
 import inter
 
-load_dotenv()
+from dotenv import load_dotenv
 
 loginRequest = False
 
@@ -15,18 +16,20 @@ BOT_USERNAME: Final = os.getenv("BOT_USERNAME")
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     response: str = "Hello! Thanks for chatting with me! I am NIMBLE and I am here to help you regarding your bank information!"
     if mongoOp.userExists(update.message.chat.id):
-        response+="You have been successfully logged in"
+        response+="\nYou have been successfully logged in"
     else:
-        response+="Enter /login to login"
+        response+="\nEnter /login to login"
     await update.message.reply_text(response)
 
 async def login_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global loginRequest
     text: str = update.message.text
     loginRequest = True
     await update.message.reply_text("Enter your credentials in format\nusername password")
 
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global loginRequest
     message_type: str = update.message.chat.type
     text: str = update.message.text
     response: str = ""
@@ -37,7 +40,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if mongoOp.login(update.message.chat.id, text):
             response = "Successfully logged in"
         else:
-            response = "Invalid credentials or format"
+            response = "Invalid credentials or format\nTry again"
+        loginRequest = False
     else:
         response = inter.response(text, update.message.chat.id)
 
