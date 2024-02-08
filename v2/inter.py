@@ -1,30 +1,26 @@
 import mongoOp
-# import chatBot
+import chatBot
 from datetime import datetime
 
 def response(input, id):
-    # tag: str = chatBot.chat(input)
+    resp: str = chatBot.chat(input)
     tag = "time_query"
-    resp: str = ""
 
-    if(tag=="balance_graph"):
+    if(resp=="balance_graph"):
         if(mongoOp.userExists(id)):
             resp = mongoOp.balanceGraph(id)
         else:
             resp = "You need to login first"
-    elif(tag=="balance_enquiry"):
+    elif(resp=="balance_enquiry"):
         if(mongoOp.userExists(id)):
             resp = mongoOp.balance(id)
         else:
             resp = "You need to login first"
-    elif(tag=="latest_updates"):
+    elif(resp=="latest_updates"):
         resp = mongoOp.updates()
-    elif(tag=="interest_rates"):
+    elif(resp=="interest_rates"):
         resp = mongoOp.interest()
-    elif(tag=="time_query"): 
+    elif(resp=="time_query"): 
         resp = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    else:
-        resp = "noooo"
-
 
     return resp
