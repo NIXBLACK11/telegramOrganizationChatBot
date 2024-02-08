@@ -1,0 +1,540 @@
+{"intents":[
+    {
+      "tag": "greeting",
+      "patterns": [
+         "Hi",
+         "How are you?",
+         "Is anyone there?",
+         "Hello",
+         "Good day",
+         "What's up",
+         "how are ya",
+         "heyy",
+         "whatsup",
+         "??? ??? ??"
+      ],
+      "responses": [
+         "Hello!",
+         "Good to see you again!",
+         "Hi there, how can I help?"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "goodbye",
+      "patterns": [
+         "cya",
+         "see you",
+         "bye bye",
+         "See you later",
+         "Goodbye",
+         "I am Leaving",
+         "Bye",
+         "Have a Good day",
+         "talk to you later",
+         "ttyl",
+         "i got to go",
+         "gtg"
+      ],
+      "responses": [
+         "Sad to see you go :(",
+         "Talk to you later",
+         "Goodbye!",
+         "Come back soon"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "creator",
+      "patterns": [
+         "what is the name of your developers",
+         "what is the name of your creators",
+         "what is the name of the developers",
+         "what is the name of the creators",
+         "who created you",
+         "your developers",
+         "your creators",
+         "who are your developers",
+         "developers",
+         "you are made by",
+         "you are made by whom",
+         "who created you",
+         "who create you",
+         "creators",
+         "who made you",
+         "who designed you"
+      ],
+      "responses": [
+         "My creator is NIXBLACK"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "name",
+      "patterns": [
+         "name",
+         "your name",
+         "do you have a name",
+         "what are you called",
+         "what is your name",
+         "what should I call you",
+         "whats your name?",
+         "what are you",
+         "who are you",
+         "who is this",
+         "what am i chatting to",
+         "who am i taking to",
+         "what are you"
+      ],
+      "responses": [
+         "You can call me Chatbanker.",
+         "I'm Chatbanker.",
+         "I am a Chatbanker.",
+         "I am your Chatbanker."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "hours",
+      "patterns": [
+         "bank timings",
+         "what is the bank's timing",
+         "working days of the bank",
+         "when are you guys open at the bank",
+         "what are your bank hours",
+         "hours of operation for the bank",
+         "when is the bank open",
+         "bank timing",
+         "what about bank timing",
+         "is the bank open on Saturday",
+         "tell something about bank hours",
+         "what is the bank's operating hours",
+         "when should i come to the bank",
+         "when should i visit the bank",
+         "what is my bank's time",
+         "bank timing",
+         "timing for the bank"
+      ],
+      "responses": [
+         "The bank is open from 9am to 5pm Monday-Friday and from 9am to 12pm on Saturdays!"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "number",
+      "patterns": [
+         "more info",
+         "contact info",
+         "how to contact the bank",
+         "bank telephone number",
+         "bank number",
+         "What is your bank's contact no",
+         "Contact number for the bank?",
+         "how to call the bank",
+         "Bank phone no?",
+         "how can i contact the bank",
+         "Can i get your bank's phone number",
+         "how can i call the bank",
+         "phone number for the bank",
+         "bank phone no",
+         "call the bank"
+      ],
+      "responses": [
+         "You can contact the bank at: BANK_PHONE_NUMBER"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "balance_enquiry",
+      "patterns": [
+         "can you tell me my account balance",
+         "what is my account balance",
+         "what is my current balance",
+         "check my account balance",
+         "account balance inquiry",
+         "balance check",
+         "how much money do I have in my account",
+         "account status",
+         "get my balance",
+         "tell me my balance",
+         "check balance",
+         "account balance",
+         "what's in my account",
+         "balance enquiry",
+         "account status check"
+      ],
+      "responses": ["balance_enquiry"],
+      "context_set": ""
+   },
+   {
+      "tag": "balance_graph",
+      "patterns": [
+         "can you tell me the graph of balance",
+         "show me the balance graph",
+         "balance graph",
+         "show me my account balance graph",
+         "visual representation of my balance",
+         "graphical representation of account balance",
+         "display balance trend",
+         "balance over time",
+         "account balance history",
+         "chart of my account balance",
+         "plot my balance",
+         "balance timeline",
+         "graph showing account balance",
+         "historical balance data"
+      ],
+      "responses": ["balance_graph"],
+      "context_set": ""
+   },
+   {
+      "tag": "location",
+      "patterns": [
+         "where is the bank located",
+         "bank is located at",
+         "where is the bank",
+         "where is bank located",
+         "address of the bank",
+         "how to reach the bank",
+         "bank location",
+         "bank address",
+         "wheres the bank",
+         "how can I reach the bank",
+         "whats is the bank's address",
+         "what is the address of the bank",
+         "bank address",
+         "location of the bank"
+      ],
+      "responses": [
+         "The bank is located at Nainital, Uttarakhand"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "latest_updates",
+      "patterns": [
+         "what are the latest updates about the bank",
+         "what are the updates in policy",
+         "what is the latest news regarding the bank",
+         "recent changes in bank policies",
+         "updates on bank services",
+         "latest announcements from the bank",
+         "bank news and updates",
+         "any recent changes in the bank",
+         "tell me the latest information about the bank",
+         "updates on banking services",
+         "recent developments in the bank",
+         "bank policy changes",
+         "latest news from the bank",
+         "information on recent bank updates",
+         "what's new with the bank"
+      ],
+      "responses": ["latest_updates"],
+      "context_set": ""
+   },
+   {
+      "tag": "interest_rates",
+      "patterns": [
+         "what are the interest rates provided by your bank",
+         "tell me about the interest rates of your bank",
+         "interest rates?",
+         "what are the changes in the interest",
+         "current interest rates",
+         "bank's lending rates",
+         "deposit interest rates",
+         "loan interest rates",
+         "latest changes in interest rates",
+         "information on interest rates",
+         "how much interest does the bank offer",
+         "interest rates for savings accounts",
+         "loan interest information",
+         "recent updates on interest rates",
+         "rate of interest",
+         "bank's interest policies"
+      ],
+      "responses": ["interest_rates"],
+      "context_set": ""
+   },
+   {
+      "tag": "document",
+      "patterns": [
+         "documents to bring",
+         "documents needed for opening an account",
+         "documents needed when opening an account",
+         "documents required for account opening",
+         "documents required for opening a bank account",
+         "documents needed during account opening",
+         "documents required during bank account opening",
+         "What documents are required for opening an account",
+         "Which documents to bring for account opening",
+         "account opening documents",
+         "what documents do I need",
+         "what documents do I need for opening an account",
+         "required documents for account opening"
+      ],
+      "responses": [
+         "You can bring your pancard, aadhar card"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "floors",
+      "patterns": [
+         "size of bank building",
+         "bank building dimensions",
+         "How many floors does the bank have",
+         "floors in the bank",
+         "floors in the bank building",
+         "how tall is the bank building",
+         "bank building floors"
+      ],
+      "responses": [
+         "Our bank building has a total of 3 floors."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "library",
+      "patterns": [
+         "is there any banking resource center",
+         "banking library facility",
+         "banking knowledge center",
+         "do you have financial resources",
+         "does the bank have a resource center",
+         "banking information center",
+         "where can I find financial literature",
+         "financial resource facility",
+         "Where is the banking resource center",
+         "Banking knowledge center",
+         "Banking resources information",
+         "Tell me about the banking resource center",
+         "how many resource centers"
+      ],
+      "responses": [
+         "We have a dedicated Banking Resource Center for your financial needs. Operating hours are from 9 am to 5 pm. For more details, visit the bank's site 'https://www.bankSite.com'."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "infrastructure",
+      "patterns": [
+         "how is bank infrastructure",
+         "infrastructure",
+         "bank infrastructure"
+      ],
+      "responses": [
+         "Our bank has an excellent infrastructure. Our facilities are modern, and we provide a secure banking environment. Our digital services are equipped with the latest technology to ensure a seamless banking experience."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "canteen",
+      "patterns": [
+         "refreshment facilities",
+         "bank cafeteria services",
+         "cafeteria amenities",
+         "is there any refreshment area at the bank",
+         "Is there a cafeteria in the bank",
+         "Does the bank have refreshment services",
+         "Where is the bank cafeteria",
+         "where is the bank cafeteria",
+         "cafeteria",
+         "Refreshment in the bank",
+         "Bank Cafeteria"
+      ],
+      "responses": [
+         "Our bank provides a designated area with a variety of refreshments for your convenience."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "menu",
+      "patterns": [
+         "refreshment menu at the bank",
+         "refreshments in the bank cafeteria",
+         "What's there on the menu at the bank",
+         "what is available in the bank cafeteria",
+         "what refreshments can we get in the bank cafeteria",
+         "refreshment variety at the bank",
+         "What is there to eat at the bank?"
+      ],
+      "responses": [
+         "We offer a diverse menu at our bank, including options like sandwiches, salads, and hot beverages for your satisfaction."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "hod",
+      "patterns": [
+         "Who is the Head of the bank",
+         "Where is the Head of the bank",
+         "bank HOD",
+         "name of bank HOD"
+      ],
+      "responses": [
+         "All departments in the bank have a single Head. Please specify the department for more accurate information."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "principal",
+      "patterns": [
+         "what is the name of bank leader",
+         "bank leader name",
+         "Who is the bank leader",
+         "Where is the leader's office at the bank",
+         "leader at the bank",
+         "name of leader at the bank"
+      ],
+      "responses": [
+         "XYZ is the bank leader, and if you need any assistance, please contact the respective department first for more appropriate help."
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "calendar",
+      "patterns": [
+         "bank calendar",
+         "financial calendar",
+         "When is the next financial quarter",
+         "Bank calendar of events",
+         "calendar of activities at the bank",
+         "financial institution exam",
+         "when is the next financial event",
+         "financial calendar at the bank",
+         "calendar of events at the bank",
+         "when is the next financial quarter"
+      ],
+      "responses": [
+         "Here is the Financial Calendar for events at the bank: 'https://www.bankSite.com"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "committee",
+      "patterns": [
+         "what are the different committees in the bank",
+         "different committees in the bank",
+         "Are there any committees in the bank",
+         "Give me committee details at the bank",
+         "bank committees",
+         "how many committees are there in the bank"
+      ],
+      "responses": [
+         "For information about the various committees in the bank, please contact this number: ADD BANK CONTACT NUMBER"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "random",
+      "patterns": [
+         "I love you",
+         "Will you marry me",
+         "Do you love me"
+      ],
+      "responses": [
+         "I am not program for this, please ask appropriate query"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "swear",
+      "patterns": [
+         "fuck",
+         "bitch",
+         "shut up",
+         "hell",
+         "stupid",
+         "idiot",
+         "dumb ass",
+         "asshole",
+         "fucker"
+      ],
+      "responses": [
+         "please use appropriate language",
+         "Maintaining decency would be appreciated"
+      ],
+      "context_set": ""
+   },
+   {
+      "tag": "vacation",
+      "patterns": [
+         "bank holidays",
+         "when will the financial quarter start",
+         "when will the financial quarter end",
+         "when is the next holiday",
+         "list of bank holidays",
+         "Holiday schedule",
+         "bank holiday list",
+         "about vacations at the bank",
+         "about bank holidays",
+         "When is the next bank holiday",
+         "When is the next holiday at the bank",
+         "how long will be the break"
+      ],
+      "responses": [
+         "Our bank follows a holiday schedule provided in advance. For details, refer to the official bank calendar or contact our customer service for information about upcoming holidays."
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "salutaion",
+      "patterns": [
+         "okk",
+         "okie",
+         "nice work",
+         "well done",
+         "good job",
+         "thanks for the help",
+         "Thank You",
+         "its ok",
+         "Thanks",
+         "Good work",
+         "k",
+         "ok",
+         "okay"
+      ],
+      "responses": [
+         "I am glad I helped you",
+         "welcome, anything else i can assist you with?"
+      ],
+      "context_set": ""
+   },
+    {
+      "tag": "task",
+      "patterns": [
+         "what can you do",
+         "what are the thing you can do",
+         "things you can do",
+         "what can u do for me",
+         "how u can help me",
+         "why i should use you"
+      ],
+      "responses": [
+         "I can answer to low-intermediate questions regarding the bank",
+         "You can ask me questions regarding the bank, and i will try to answer them"
+      ],
+      "context_set": ""
+   },
+   {
+    "tag": "time_query",
+    "patterns": [
+        "tell me the time",
+        "what's the time now",
+        "do you know what time it is",
+        "can you tell me the current time",
+        "what time is it",
+        "could you inform me of the time",
+        "I need to know the time",
+        "could you please tell me the time",
+        "what's the current time",
+        "could you give me the time",
+        "time please",
+        "tell me what time it is"
+    ],
+    "responses": [
+        "time_query"
+    ],
+    "context_set": ""
+    }
+]}
