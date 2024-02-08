@@ -27,6 +27,18 @@ async def login_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     loginRequest = True
     await update.message.reply_text("Enter your credentials in format\nusername password")
 
+async def logout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    response: str = ""
+    if mongoOp.userExists(update.message.chat.id):
+        if mongoOp.logout(update.message.chat.id):
+            response = "Successfully logged out"
+        else:
+            response = "Unable to logout"
+    else:
+        response = "You are not logged in!!"
+    
+    print('Bot:', response)
+    await update.message.reply_text(response)
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global loginRequest
@@ -37,11 +49,21 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f'User ({update.message.chat.id}) in {message_type}: "{text}"')
 
     if loginRequest:
-        if mongoOp.login(update.message.chat.id, text):
-            response = "Successfully logged in"
-        else:
-            response = "Invalid credentials or format\nTry again"
-        loginRequest = False
+        try:
+            [username, password] = text.split(" ")
+            ifNew = mongoOp.ifNewCred(update.message.chat.id, text)
+            successLogin = mongoOp.login(update.message.chat.id, text)
+
+            if ifNew and successLogin:
+                response = response+"You will be logged out from previous account\nSuccessfully logged in"
+                loginRequest = False
+            elif ifNew and not successLogin:
+                response = "Invalid Credentials\nRetry"
+            elif not ifNew and successLogin:
+                response = "Already logged in"
+                loginRequest = False
+        except ValueError:
+            response = response+"Invalid credentials\nTry again use format\nusername password"
     else:
         response = inter.response(text, update.message.chat.id)
 

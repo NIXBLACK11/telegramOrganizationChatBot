@@ -27,24 +27,40 @@ def userExists(id):
         resp = False
     return resp
     
+def ifNewCred(id, credentials):
+    users = connect("Users")
+    [username, password] = credentials.split(" ")
+    alreadyLogin = users.find_one({"id": id})
+    if users["username"]!=username or users["password"]!=password:
+        users.update_one({"id": id}, {"$set": {"id": -1}})
+        return True
+    return False    
+
 def login(id, credentials):
     resp: bool = False
     users = connect("Users")
-    
-    try:
-        [username, password] = credentials.split(" ")
-    except ValueError:
-        resp = False
+
+    [username, password] = credentials.split(" ")
 
     exists = users.find_one({"username": username, "password": password})
     if exists:
         if exists["id"] == -1:
             users.update_one({"username": username, "password": password}, {"$set": {"id": id}})
             resp = True
-        elif exists["id"] == id:
-            resp = True
         else:
             resp = False
+    else:
+        resp = False
+    return resp
+
+def logout(id):
+    resp: bool = False
+    users = connect("Users")
+
+    result = users.update_one({"id": id}, {"$set": {"id": id}})
+
+    if result.matched_count > 0:
+        resp = True
     else:
         resp = False
     return resp
