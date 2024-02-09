@@ -42,13 +42,14 @@ async def logout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(response)
 
 async def language_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    global loginRequest
+    global setLanguage
     text: str = update.message.text
     setLanguage = True
     await update.message.reply_text("Enter the language you want to set")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global loginRequest
+    global setLanguage
     message_type: str = update.message.chat.type
     text: str = update.message.text
     response: str = ""
@@ -72,10 +73,18 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         except ValueError:
             response = response+"Invalid credentials\nTry again use format\nusername password"
     elif setLanguage:
-        
+        if(len(text.split(" "))!=1):
+            setLanguage = False
+            response = "Invalid input"
+        else:
+            pass
     else:
         response = inter.response(text, update.message.chat.id)
-
+        path = f'monthly_expenditures_{str(update.message.chat.id)}.png'
+        if response == path:
+            await context.bot.send_photo(update.message.chat.id, photo=open(path, 'rb'))
+            os.remove(path)
+            return
     print('Bot:', response)
     await update.message.reply_text(response)
 

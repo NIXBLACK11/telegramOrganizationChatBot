@@ -1,5 +1,6 @@
 import mongoOp
 import chatBot
+import photoWork
 from datetime import datetime
 
 def response(input, id):
@@ -7,7 +8,8 @@ def response(input, id):
 
     if(resp=="balance_graph"):
         if(mongoOp.userExists(id)):
-            resp = mongoOp.balanceGraph(id)
+            values = [int(i) for i in mongoOp.balanceGraph(id).split(",")]
+            resp = photoWork.create_plot(values, id)
         else:
             resp = "You need to login first"
     elif(resp=="balance_enquiry"):
