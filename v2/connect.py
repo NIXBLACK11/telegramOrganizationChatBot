@@ -9,6 +9,7 @@ import inter
 from dotenv import load_dotenv
 
 loginRequest = False
+setLanguage = False
 
 TOKEN: Final = os.getenv("TELEGRAM_API")
 BOT_USERNAME: Final = os.getenv("BOT_USERNAME")
@@ -40,6 +41,12 @@ async def logout_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print('Bot:', response)
     await update.message.reply_text(response)
 
+async def language_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    global loginRequest
+    text: str = update.message.text
+    setLanguage = True
+    await update.message.reply_text("Enter the language you want to set")
+
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global loginRequest
     message_type: str = update.message.chat.type
@@ -64,6 +71,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 loginRequest = False
         except ValueError:
             response = response+"Invalid credentials\nTry again use format\nusername password"
+    elif setLanguage:
+        
     else:
         response = inter.response(text, update.message.chat.id)
 
@@ -81,6 +90,7 @@ if __name__ == '__main__':
     # Commands
     app.add_handler(CommandHandler('start', start_command))
     app.add_handler(CommandHandler('login', login_command))
+    app.add_handler(CommandHandler('logout', logout_command))
 
     # Messages
     app.add_handler(MessageHandler(filters.TEXT, handle_message))

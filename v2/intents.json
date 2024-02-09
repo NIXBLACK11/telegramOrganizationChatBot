@@ -273,7 +273,7 @@
          "required documents for account opening"
       ],
       "responses": [
-         "You should bring your pancard, aadhar card"
+         "documents"
       ],
       "context_set": ""
    },

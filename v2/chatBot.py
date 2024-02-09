@@ -59,14 +59,3 @@ def chat(user_input):
     for intent in data['intents']:
         if intent['tag'] == tag:
             return random.choice(intent['responses'])
-
-
-
-# sentences = ["Hi", "who made you", "what are the bank timings", "what is my account balance", "where is the bank located",
-#               "नमस्ते", "आपको किसने बन", "बैंक का समय क्या", "मेरे खाते का शेष राशि क्", "बैंक कहाँ स्थित है?",
-#               "Hola", "¿Quién te creó?", "¿Cuáles son los horarios del banco?", "¿Cuál es el saldo de mi cuenta?", "¿Dónde está ubicado el banco?",
-#               "what documents are required to open an account", "खाता खोलने के लिए कौन-कौन से दस्तावेज़ आ", "¿Qué documentos se requieren para abrir una cuenta?"]
-
-# for sentence in sentences:
-#   print(f"You: {sentence}")
-#   print(f"Bot: {process_input(sentence)}")

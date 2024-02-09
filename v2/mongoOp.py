@@ -57,7 +57,7 @@ def logout(id):
     resp: bool = False
     users = connect("Users")
 
-    result = users.update_one({"id": id}, {"$set": {"id": id}})
+    result = users.update_one({"id": id}, {"$set": {"id": -1}})
 
     if result.matched_count > 0:
         resp = True
@@ -84,3 +84,8 @@ def interest():
     public = connect("Public")
     publicData = public.find_one({})
     return publicData["interestRates"]
+
+def documents():
+    public = connect("Public")
+    publicData = public.find_one({})
+    return publicData["documents"]

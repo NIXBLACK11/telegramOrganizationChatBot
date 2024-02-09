@@ -4,7 +4,6 @@ from datetime import datetime
 
 def response(input, id):
     resp: str = chatBot.chat(input)
-    tag = "time_query"
 
     if(resp=="balance_graph"):
         if(mongoOp.userExists(id)):
@@ -22,5 +21,7 @@ def response(input, id):
         resp = mongoOp.interest()
     elif(resp=="time_query"): 
         resp = str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    elif(resp=="documents"):
+        resp = mongoOp.documents()
 
     return resp
