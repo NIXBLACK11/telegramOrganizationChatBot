@@ -44,8 +44,8 @@ By addressing these challenges, chatbots significantly contribute to improved cu
 experiences, increased efficiency, and enhanced productivity across industries and sectors.
 
 ## METHODOLOGY
-[v1 methodology](./v1/README.md)
-[v2 methodology](./v2/README.md)
+### [v1 methodology](./v1/README.md)
+### [v2 methodology](./v2/README.md)
 
 ## Technologies used by CHATBANKER
 When developing ChatBanker, I leveraged a variety of technologies to ensure its functionality
