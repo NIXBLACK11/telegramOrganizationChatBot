@@ -1,0 +1,10 @@
+python-telegram-bot
+nltk
+pymongo
+matplotlib
+python-dotenv
+torch 
+torchvision 
+torchaudio
+googletrans-py
+laser_encoders
