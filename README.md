@@ -116,7 +116,7 @@ By leveraging the Laser Encoder, applications like ChatBanker can provide seamle
 
 ## Working of the ChatBot
 
-![CHATBANKER](./Readme/Untitled%20Diagram.drawio(1).png)
+![CHATBANKER](./Readme/chatbotWorking.drawio.png)
 
 Experience the chatbot in action on Telegram! Simply search for the bot using the handle [@Chatbanker_bot] or directly using the [link](https://web.telegram.org/a/#6941909097) and witness its capabilities using the provided test login credentials:
 
