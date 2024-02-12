@@ -1,6 +1,6 @@
 # Telegram Based Chatbot for bank users
 
-To use the bot check [chatbanker on telegram](https://t.me/bank_detail_bot)
+To use the bot check [chatbanker on telegram](https://t.me/Chatbanker_bot)
 
 ![CHATBANKER](./Readme/chatBot.jpg)
 
@@ -118,10 +118,10 @@ By leveraging the Laser Encoder, applications like ChatBanker can provide seamle
 
 ![CHATBANKER](./Readme/Untitled%20Diagram.drawio(1).png)
 
-Experience the chatbot in action on Telegram! Simply search for the bot using the handle [@bank_detail_bot] or directly using the [link](https://t.me/bank_detail_bot) and witness its capabilities using the provided test login credentials:
+Experience the chatbot in action on Telegram! Simply search for the bot using the handle [@Chatbanker_bot] or directly using the [link](https://t.me/Chatbanker_bot) and witness its capabilities using the provided test login credentials:
 
-Username: test<br>
-Password: test@123
+Username: admin<br>
+Password: admin
 
 Explore the bot's functionality, including inquiries about user information such as account balances and year-long balance graphs. 
 
