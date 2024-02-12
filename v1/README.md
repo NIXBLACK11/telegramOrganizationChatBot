@@ -43,3 +43,38 @@ The Cross-Entropy Loss serves as the guiding compass for model training, gauging
 #### Optimizer: Adam Optimizer (torch.optim.Adam)
 
 The project harnesses the power of the Adam optimizer, known for its adaptive learning rate mechanism. By adjusting learning rates based on gradient moments, this optimizer ensures efficient and stable convergence.
+
+## Installation
+- Clone this repository and navigate to the project directory.
+
+        git clone https://github.com/NIXBLACK11/telegramOrganizationChatBot.git
+
+- Install pyTorch using this command
+
+        pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu 
+
+- Go to the v1 directory
+
+        cd v1
+
+- Install the required Python packages by running the following command:
+
+        pip install -r requirements.txt
+
+- To install nltk tokenizer
+
+        python3 -c "import nltk;nltk.download('punkt')"
+
+- Create a new Telegram bot by following the instructions in the Telegram Bot documentation.
+
+- Create a MongoDB instance and obtain the connection URL.
+
+- Create a .env file in the root directory of the project and set the following environment variables:
+
+        BOT_TOKEN=<Your Telegram API token>
+        DATABASE_URL=<Your MongoDB connection URL>
+
+## Usage
+To start the chat bot, run the following command:
+
+    python bot.py
