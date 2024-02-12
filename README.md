@@ -105,6 +105,7 @@ Key Features:
 - Part-of-speech tagging: Identifying grammatical components of words.
 - Syntactic parsing: Analyzing sentence structure for deeper understanding.
 ### LASER Encoder
+![Alt text](./Readme/laser.png)
 The [Laser Encoder](https://github.com/facebookresearch/LASER), developed by Meta AI Research, is a powerful tool used for generating embeddings for sentences, regardless of the language they're written in. Embeddings are numerical representations of text that capture semantic meaning, enabling machines to understand and compare textual data effectively.
 
 Unlike traditional methods that treat each language independently, the Laser Encoder utilizes a unified model that considers the semantic similarity of sentences across different languages. This means that sentences conveying similar meanings in different languages will have embeddings that are close together in the embedding space, facilitating cross-lingual comparisons and tasks.
